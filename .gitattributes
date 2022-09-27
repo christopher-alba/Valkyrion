@@ -1,3 +1,4 @@
 cityLevelTile1.prefab filter=lfs diff=lfs merge=lfs -text
 cityLevelTile1.fbx filter=lfs diff=lfs merge=lfs -text
+Assets/Art/Environments/cityLevelTile1.fbx filter=lfs diff=lfs merge=lfs -text
 Assets/Art/Environments/*.fbx filter=lfs diff=lfs merge=lfs -text
