@@ -40,8 +40,12 @@ public class EnemyShoot : MonoBehaviour
     {
         if(player == null)
         {
-            CancelInvoke("fire1");
-            CancelInvoke("fire2");
+            player = FindObjectOfType<shipController>()?.transform;
+            if(player == null)
+            {
+                CancelInvoke("fire1");
+                CancelInvoke("fire2");
+            } 
         }
         
     }

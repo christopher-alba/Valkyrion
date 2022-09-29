@@ -12,6 +12,10 @@ public class PlayerHealthBar : MonoBehaviour
     {
         instance = this;   
     }
+    private void Start()
+    {
+        SetMaxHealth(PlayerLifeController.instance.health);
+    }
     public void SetMaxHealth(float health)
     {
         slider.maxValue = health;
@@ -20,5 +24,6 @@ public class PlayerHealthBar : MonoBehaviour
     public void SetHealth(float health)
     {
         slider.value = health;
+        Debug.Log(slider.value);
     }
 }

@@ -15,6 +15,10 @@ public class PlayerHomeGeneral : MonoBehaviour
     public void SlayValkyrion()
     {
         LevelChanger.instance.FadeToLevel(2);
+        GameManager.instance.currentLevel = 1;
+        GameManager.instance.totalLevel = 1;
+        GameManager.instance.currentEnemiesAlive = 0;
+        GameManager.instance.finalScore = 0;
     }
     public void ReturnToMainMenu()
     {

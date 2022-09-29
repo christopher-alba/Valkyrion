@@ -6,8 +6,25 @@ using UnityEngine.SceneManagement;
 public class PlayerLifeController : MonoBehaviour
 {
     // Start is called before the first frame update
+    public static PlayerLifeController instance;
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
     public float health = 100;
     public GameObject explosion;
+    public void SetHealth()
+    {
+        PlayerHealthBar.instance.SetHealth(health);
+        PlayerHealthText.instance.SetHealth(health);
+    }
     private void Start()
     {
         PlayerHealthBar.instance.SetMaxHealth(health);

@@ -18,6 +18,6 @@ public class LevelChanger : MonoBehaviour
     }
     public void OnFadeComplete()
     {
-        SceneManager.LoadScene(levelToLoad);
+        SceneManager.LoadScene(levelToLoad);  
     }
 }

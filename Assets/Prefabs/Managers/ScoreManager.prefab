@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853b9dda4cd8359428dd0574d2583f65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerScoreUI: {fileID: 7622527377787461033, guid: 77801a66db4cc7e4cbac942167b96fc1, type: 3}
-  playerScoreMultiplierUI: {fileID: 7131810203110309786, guid: 17d9c4c48da7a254781dd1db0535604d, type: 3}
+  playerScoreUI: {fileID: 2719971077403979512, guid: 77801a66db4cc7e4cbac942167b96fc1, type: 3}
+  playerScoreMultiplierUI: {fileID: 6135929323086410553, guid: a49b8498c972f2547a8fea0eea442f36, type: 3}
   playerScoreMultiplier: 14
   playerScore: 1000
+  highestMultiplier: 1

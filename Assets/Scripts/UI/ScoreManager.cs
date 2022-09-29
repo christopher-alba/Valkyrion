@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
@@ -15,15 +16,38 @@ public class ScoreManager : MonoBehaviour
     public int highestMultiplier = 1;
     private void Awake()
     {
-        instance = this;    
-    }
+        if (instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
 
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+    private void Update()
+    {
+        if(playerScoreUI == null && SceneManager.GetActiveScene().buildIndex > 1)
+        {
+            playerScoreUI = GameObject.Find("PlayerScoreValue")?.GetComponent<TMP_Text>();
+            playerScoreUI.text = playerScore.ToString();
+        }
+        if(playerScoreMultiplierUI == null && SceneManager.GetActiveScene().buildIndex > 1)
+        {
+            playerScoreMultiplierUI = GameObject.Find("PlayerScoreMultiplier")?.GetComponent<TMP_Text>();
+            playerScoreMultiplierUI.text = "x" + playerScoreMultiplier.ToString();
+        }
+    }
     public void addToPlayerScore(int scoreToAdd)
     {
         playerScore += scoreToAdd;
         Debug.Log(playerScore);
         playerScoreUI.text = playerScore.ToString();
         GameManager.instance.finalScore += scoreToAdd;
+    }
+    public void setPlayerScore()
+    {
+        playerScoreUI.text = playerScore.ToString();
     }
     public void resetPlayerScore()
     {

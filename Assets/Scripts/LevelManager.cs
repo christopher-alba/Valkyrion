@@ -23,8 +23,14 @@ public class LevelManager : MonoBehaviour
         enemySpawn = GameObject.Find("EnemySpawn").GetComponent<BoxCollider>();
         player = GameObject.Find("PlayerShip").GetComponent<Transform>();
         Debug.Log(enemySpawn);
-        GameManager.instance.StartGame();
-        AudioManager.instance.LevelMusic();
+        if(GameManager.instance.totalLevel == 1)
+        {
+            GameManager.instance.StartGame();
+            AudioManager.instance.LevelMusic();
+        } else
+        {
+            SpawnEnemies();
+        }
     }
     private void spawnRegularEnemies()
     {

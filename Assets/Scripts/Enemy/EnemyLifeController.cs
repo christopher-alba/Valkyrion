@@ -39,7 +39,7 @@ public class EnemyLifeController : MonoBehaviour
                 }
                
                 Instantiate(explosion, transform.position, Quaternion.Euler(90, 0, 0));
-                if(Random.Range(0,100) < 3)
+                if(Random.Range(0,100) < 5)
                 {
                     Instantiate(levelUpPowerUp, transform.position, Quaternion.Euler(90, 0, 0));
                 }

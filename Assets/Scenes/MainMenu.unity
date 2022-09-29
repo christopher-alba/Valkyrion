@@ -853,11 +853,6 @@ Transform:
   m_Father: {fileID: 608475186}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &357203473 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6793901626056941681, guid: c068f7bb36100b246802a736bf0cb4bd, type: 3}
-  m_PrefabInstance: {fileID: 668356889}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &371409681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,17 +1724,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5875229209986458492, guid: c068f7bb36100b246802a736bf0cb4bd, type: 3}
-      propertyPath: m_RenderPostProcessing
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6793901626056941681, guid: c068f7bb36100b246802a736bf0cb4bd, type: 3}
       propertyPath: m_Name
       value: Main Camera (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6793901626056941683, guid: c068f7bb36100b246802a736bf0cb4bd, type: 3}
-      propertyPath: far clip plane
-      value: 200000
       objectReference: {fileID: 0}
     - target: {fileID: 6793901626056941684, guid: c068f7bb36100b246802a736bf0cb4bd, type: 3}
       propertyPath: m_RootOrder
@@ -2864,23 +2851,6 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 6793901626056941683, guid: c068f7bb36100b246802a736bf0cb4bd, type: 3}
   m_PrefabInstance: {fileID: 668356889}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1008973187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 357203473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IsGlobal: 1
-  priority: 0
-  blendDistance: 0
-  weight: 1
-  sharedProfile: {fileID: 11400000, guid: e5e2b1137fe7e2940ae345595203d085, type: 2}
 --- !u!1 &1030577624
 GameObject:
   m_ObjectHideFlags: 0
@@ -6317,8 +6287,16 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 8983905583839220937, guid: 0d713f03b5eb4ad4cb6675ee43b7cbc4, type: 3}
+      propertyPath: totalLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983905583839220937, guid: 0d713f03b5eb4ad4cb6675ee43b7cbc4, type: 3}
       propertyPath: savedGameIDSelected
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983905583839220937, guid: 0d713f03b5eb4ad4cb6675ee43b7cbc4, type: 3}
+      propertyPath: hardCapMaxEnemyCount
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d713f03b5eb4ad4cb6675ee43b7cbc4, type: 3}

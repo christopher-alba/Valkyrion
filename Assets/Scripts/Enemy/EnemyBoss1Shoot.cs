@@ -48,12 +48,15 @@ public class EnemyBoss1Shoot : MonoBehaviour
         StartCoroutine(ChargeAndFireLazers());
     }
     void Update()
-    {
+    { 
         if (player == null)
         {
-            CancelInvoke(nameof(fireRockets));
-            CancelInvoke(nameof(fireLazers));
+            player = FindObjectOfType<shipController>()?.transform;
+            if (player == null)
+            {
+                CancelInvoke(nameof(fireRockets));
+                CancelInvoke(nameof(fireLazers));
+            }
         }
-
     }
 }

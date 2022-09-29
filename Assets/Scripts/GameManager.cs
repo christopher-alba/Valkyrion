@@ -78,14 +78,13 @@ public class GameManager : MonoBehaviour
 
     public void ResetFinalStats()
     {
-        
         currentMaxEnemyCount = 5;
-        currentLevel = 1;
+        currentLevel = 0;
         ScoreManager.instance.resetPlayerScore();
         ScoreManager.instance.resetPlayerScoreMultiplier();
 
         /*FOR JSON DATA STORAGE*/
-        totalLevel = 1;
+        totalLevel = 0;
         finalScore = 0;
         enemiesKilled = 0;
         enemyBossesKilled = 0;
@@ -100,17 +99,10 @@ public class GameManager : MonoBehaviour
         player = FindObjectOfType<shipController>()?.transform;
         ScoreManager.instance.resetPlayerScore();
         ScoreManager.instance.resetPlayerScoreMultiplier();
-        LevelManager.instance.SpawnEnemies();
     }
     void IncrementLevels()
     {
-        if (spawnMinibosses)
-        {
-            spawnMinibosses = false;
-        } else
-        {
-            spawnMinibosses = true;
-        }
+        
         if (currentLevel == 5)
         {
             currentLevel = 1;
@@ -124,8 +116,21 @@ public class GameManager : MonoBehaviour
         {
             currentMaxEnemyCount++;
         }
-
-        LevelManager.instance.SpawnEnemies();
+        if(totalLevel == 21)
+        {
+            LevelChanger.instance.FadeToLevel(3);
+        } else
+        {
+            LevelManager.instance.SpawnEnemies();
+        }
+        if (spawnMinibosses)
+        {
+            spawnMinibosses = false;
+        }
+        else
+        {
+            spawnMinibosses = true;
+        }
     }
 
     // Update is called once per frame
@@ -136,7 +141,7 @@ public class GameManager : MonoBehaviour
             if (currentEnemiesAlive <= 0 && gameHasStarted)
             {
                 currentEnemiesAlive = 1;
-                Invoke(nameof(IncrementLevels), 2f);
+                IncrementLevels();
             }
         }
         if (Input.GetKeyDown(KeyCode.Escape))
