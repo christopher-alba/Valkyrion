@@ -53,7 +53,11 @@ public class ScoreManager : MonoBehaviour
     {
         Debug.Log("Resetting score from:" + playerScore);
         playerScore = 0;
-        playerScoreUI.text = playerScore.ToString();
+        if(playerScoreUI != null)
+        {
+            playerScoreUI.text = playerScore.ToString();
+        }
+        
     }
     public void  addToPlayerScoreMultiplier(int multiplierToAdd)
     {
@@ -64,7 +68,11 @@ public class ScoreManager : MonoBehaviour
     public void resetPlayerScoreMultiplier()
     {
         playerScoreMultiplier = 1;
-        playerScoreMultiplierUI.text = "x" + playerScoreMultiplier.ToString();
+        if(playerScoreMultiplierUI != null)
+        {
+            playerScoreMultiplierUI.text = "x" + playerScoreMultiplier.ToString();
+        }
+        
     }
     public void decrementPlayerScoreMultiplier()
     {
