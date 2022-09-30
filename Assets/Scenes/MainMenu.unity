@@ -6300,7 +6300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8983905583839220937, guid: 0d713f03b5eb4ad4cb6675ee43b7cbc4, type: 3}
       propertyPath: hardCapMaxEnemyCount
-      value: 200
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d713f03b5eb4ad4cb6675ee43b7cbc4, type: 3}
