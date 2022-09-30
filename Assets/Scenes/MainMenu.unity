@@ -1357,6 +1357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerShip
       objectReference: {fileID: 0}
+    - target: {fileID: 6608284570895256211, guid: 2d738e6c8f126c84982099477cf299fb, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 577975125, guid: 2d738e6c8f126c84982099477cf299fb, type: 3}
     - {fileID: 6301730084372548953, guid: 2d738e6c8f126c84982099477cf299fb, type: 3}

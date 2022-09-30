@@ -93,7 +93,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3229162069811012807}
   m_LocalRotation: {x: -0.49991274, y: -0.50008726, z: -0.49991274, w: 0.50008726}
-  m_LocalPosition: {x: 233.45496, y: -22714, z: 840.6941}
+  m_LocalPosition: {x: -138.04361, y: -22714, z: 821.1044}
   m_LocalScale: {x: 700, y: 700, z: 700}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finalPosBoxCollider: {fileID: 1632186137876001402, guid: 467c4812f3bb3dc459d1db0d32b448de, type: 3}
-  speed: 10000
+  speed: 15000
   mainCamera: {fileID: 6793901626056941683, guid: c068f7bb36100b246802a736bf0cb4bd, type: 3}
 --- !u!64 &6859214483730048709
 MeshCollider:

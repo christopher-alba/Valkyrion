@@ -37,11 +37,11 @@ public class EnemyBoss1Shoot : MonoBehaviour
     }
     IEnumerator ChargeAndFireLazers()
     {
-        Instantiate(lazerCharge, enemyFirePoints[2].position + new Vector3(0,0,-40), enemyFirePoints[2].rotation);
-        Instantiate(lazerCharge, enemyFirePoints[3].position + new Vector3(0, 0, -40), enemyFirePoints[3].rotation);
+        Instantiate(lazerCharge, enemyFirePoints[2].position + new Vector3(0,0,-40), enemyFirePoints[2].rotation, gameObject.transform);
+        Instantiate(lazerCharge, enemyFirePoints[3].position + new Vector3(0, 0, -40), enemyFirePoints[3].rotation, gameObject.transform);
         yield return new WaitForSeconds(2);
-        Instantiate(bullets[1], enemyFirePoints[2].position, enemyFirePoints[2].rotation);
-        Instantiate(bullets[1], enemyFirePoints[3].position, enemyFirePoints[3].rotation);
+        Instantiate(bullets[1], enemyFirePoints[2].position, enemyFirePoints[2].rotation, gameObject.transform);
+        Instantiate(bullets[1], enemyFirePoints[3].position, enemyFirePoints[3].rotation, gameObject.transform);
     }
     void fireLazers()
     { 
