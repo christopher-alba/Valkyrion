@@ -18,16 +18,18 @@ public class PlayerLifeController : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
     }
+    public float maxHealth = 100;
     public float health = 100;
     public GameObject explosion;
     public void SetHealth()
-    {
+    {      
+        PlayerHealthBar.instance.SetMaxHealth(maxHealth);
         PlayerHealthBar.instance.SetHealth(health);
         PlayerHealthText.instance.SetHealth(health);
     }
     private void Start()
     {
-        PlayerHealthBar.instance.SetMaxHealth(health);
+        PlayerHealthBar.instance.SetMaxHealth(maxHealth);
         PlayerHealthText.instance.SetHealth(health);
     }
     public void TakeDamage(float damage)

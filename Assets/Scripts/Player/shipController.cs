@@ -58,8 +58,8 @@ public class shipController : MonoBehaviour
                 for (int i = 0; i < rocketLevel && i < maxRocketLevel + 1; i++)
                 {
 
-                    Instantiate(playerRocket, firePoints[4].position, firePoints[4].rotation * Quaternion.Inverse(Quaternion.Euler(0, 0, spreadAngle)));
-                    Instantiate(playerRocket, firePoints[5].position, firePoints[5].rotation * Quaternion.Inverse(Quaternion.Euler(0, 0, -spreadAngle)));
+                    Instantiate(playerRocket, firePoints[4].position, firePoints[4].rotation * Quaternion.Inverse(Quaternion.Euler(0, spreadAngle, 0)));
+                    Instantiate(playerRocket, firePoints[5].position, firePoints[5].rotation * Quaternion.Inverse(Quaternion.Euler(0, -spreadAngle, 0 )));
                     spreadAngle += 5;
                 }
             }

@@ -30,6 +30,7 @@ public class LevelManager : MonoBehaviour
         } else
         {
             SpawnEnemies();
+            PlayerLifeController.instance.SetHealth();
         }
     }
     private void spawnRegularEnemies()

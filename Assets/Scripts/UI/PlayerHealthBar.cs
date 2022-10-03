@@ -14,12 +14,12 @@ public class PlayerHealthBar : MonoBehaviour
     }
     private void Start()
     {
-        SetMaxHealth(PlayerLifeController.instance.health);
+        SetMaxHealth(PlayerLifeController.instance.maxHealth);
+        SetHealth(PlayerLifeController.instance.health);
     }
-    public void SetMaxHealth(float health)
+    public void SetMaxHealth(float maxHealth)
     {
-        slider.maxValue = health;
-        slider.value = health;
+        slider.maxValue = maxHealth;
     }
     public void SetHealth(float health)
     {

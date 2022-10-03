@@ -9,6 +9,7 @@ public class EnemyLifeController : MonoBehaviour
     public int health = 10;
     public GameObject explosion;
     public GameObject levelUpPowerUp;
+    public GameObject healthBoost;
     public void TakeDamage(int damage)
     {
         if (health > 0)
@@ -20,6 +21,7 @@ public class EnemyLifeController : MonoBehaviour
                 if (gameObject.tag.Contains("Boss"))
                 {
                     GameManager.instance.enemyBossesKilled++;
+                    Instantiate(healthBoost, gameObject.transform.position, gameObject.transform.rotation);
                     ScoreManager.instance.addToPlayerScore(ScoreManager.instance.playerScoreMultiplier * 10000);
                     ScoreManager.instance.addToPlayerScoreMultiplier(100);
                     AudioManager.instance.LevelMusic();
