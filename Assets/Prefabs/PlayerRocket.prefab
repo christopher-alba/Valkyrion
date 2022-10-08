@@ -4945,6 +4945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   explosion: {fileID: 8418570258445983174, guid: f37528338d9f2fe488dccda894f2ebaf, type: 3}
+  explosionVFXIndex: 3
 --- !u!114 &2484690237502940460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5077,7 +5078,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3.05
+      scalar: 0.52
       minScalar: 5
       maxCurve:
         serializedVersion: 2

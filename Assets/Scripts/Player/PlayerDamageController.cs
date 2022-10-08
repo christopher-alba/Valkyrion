@@ -7,6 +7,7 @@ public class PlayerDamageController : MonoBehaviour
     // Start is called before the first frame update
     public int damage = 1;
     public GameObject explosion;
+    public int explosionVFXIndex;
     private void OnTriggerEnter(Collider collision)
     {
         EnemyLifeController lifeController = collision.GetComponent<EnemyLifeController>();
@@ -31,6 +32,7 @@ public class PlayerDamageController : MonoBehaviour
                 {
                     Instantiate(explosion, gameObject.transform.position, Quaternion.Euler(90, 0, 0));
                     Destroy(gameObject);
+                    AudioManager.instance.PlaySFX(explosionVFXIndex);
                 }
 
 

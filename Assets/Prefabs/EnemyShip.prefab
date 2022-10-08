@@ -124,7 +124,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9160027935960953956}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 50.133545, y: -22714, z: 786.62573}
+  m_LocalPosition: {x: -262.42072, y: -22714, z: 889.16455}
   m_LocalScale: {x: 300, y: 300, z: 300}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -255,6 +255,7 @@ MonoBehaviour:
   health: 25
   explosion: {fileID: 8418570258445983174, guid: f37528338d9f2fe488dccda894f2ebaf, type: 3}
   levelUpPowerUp: {fileID: 401208935188663213, guid: a319e09bb5f87ac42939cbdd6eaff075, type: 3}
+  healthBoost: {fileID: 0}
 --- !u!65 &4055255787910931744
 BoxCollider:
   m_ObjectHideFlags: 0

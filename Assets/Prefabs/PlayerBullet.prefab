@@ -162,6 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   explosion: {fileID: 7620669040955315274, guid: 967ca21df552c2d41a9b2b5a9260adf3, type: 3}
+  explosionVFXIndex: 2
 --- !u!1 &1615612508378781860
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,7 +24,7 @@ public class EnemyLifeController : MonoBehaviour
                     Instantiate(healthBoost, gameObject.transform.position, gameObject.transform.rotation);
                     ScoreManager.instance.addToPlayerScore(ScoreManager.instance.playerScoreMultiplier * 10000);
                     ScoreManager.instance.addToPlayerScoreMultiplier(100);
-                    AudioManager.instance.LevelMusic();
+                    AudioManager.instance.BossMusicStop();
                 } else if (gameObject.tag.Contains("Miniboss")) {
                     ScoreManager.instance.addToPlayerScore(ScoreManager.instance.playerScoreMultiplier * 1000);
                     ScoreManager.instance.addToPlayerScoreMultiplier(10);

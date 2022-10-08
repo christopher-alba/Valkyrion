@@ -22,11 +22,11 @@ public class LevelManager : MonoBehaviour
         Debug.Log("TESTINGA");
         enemySpawn = GameObject.Find("EnemySpawn").GetComponent<BoxCollider>();
         player = GameObject.Find("PlayerShip").GetComponent<Transform>();
+        AudioManager.instance.LevelMusic();
         Debug.Log(enemySpawn);
         if(GameManager.instance.totalLevel == 1)
         {
             GameManager.instance.StartGame();
-            AudioManager.instance.LevelMusic();
         } else
         {
             SpawnEnemies();
@@ -72,7 +72,7 @@ public class LevelManager : MonoBehaviour
 
     private void spawnBossEnemy()
     {
-        AudioManager.instance.BossMusic();
+        AudioManager.instance.BossMusicStart();
         Transform transform = bosses[Mathf.RoundToInt(Random.Range(0, bosses.Length))].transform;
         transform.position = new Vector3(Random.Range(enemySpawn.bounds.min.x, enemySpawn.bounds.max.x),
                                          player.transform.position.y,

@@ -27,6 +27,7 @@ public class shipController : MonoBehaviour
     {
         if (Input.GetButton("Fire1") && Time.time > nextFire)
         {
+            AudioManager.instance.PlaySFX(0);
             if(fireLevel >= 1)
             {
                 Instantiate(playerBullet, firePoints[0].position, firePoints[0].rotation);
@@ -52,8 +53,10 @@ public class shipController : MonoBehaviour
         }
         if(Input.GetButton("Fire1") && Time.time > nextRockets)
         {
+            
             if (rocketLevel >= 1)
             {
+                AudioManager.instance.PlaySFX(1);
                 int spreadAngle = 5;
                 for (int i = 0; i < rocketLevel && i < maxRocketLevel + 1; i++)
                 {
