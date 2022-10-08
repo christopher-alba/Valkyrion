@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class MoveToFinalPos : MonoBehaviour
 {
-    public BoxCollider finalPosBoxCollider;
     public int speed;
-    public Camera mainCamera;
+    private Camera mainCamera;
     private Transform player;
     private float randomX, randomZ, bossX, bossZ;
     private Vector3 screenBounds;

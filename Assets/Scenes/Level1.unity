@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44068488, g: 0.4893446, b: 0.56947505, a: 1}
+  m_IndirectSpecularColor: {r: 0.44068465, g: 0.48934376, b: 0.5694745, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7095,6 +7095,10 @@ PrefabInstance:
       propertyPath: bosses.Array.data[0]
       value: 
       objectReference: {fileID: 5924250278306389795, guid: 60eb5caad639a7c4488bafa6fd0a2ad5, type: 3}
+    - target: {fileID: 439827440818553072, guid: f1ca436cb5a14cc4288132c6a866a5d9, type: 3}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 1435042854495965050, guid: 5e390783ed0d017419791fe5f1a9104b, type: 3}
     - target: {fileID: 439827440818553072, guid: f1ca436cb5a14cc4288132c6a866a5d9, type: 3}
       propertyPath: miniBosses.Array.size
       value: 1
